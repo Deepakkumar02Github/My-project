@@ -9,13 +9,13 @@ steps{
  }
    post{
       success{
-         sh 'tar -cvf file.tar C:\ProgramData\Jenkins\.jenkins\workspace\github_pipeline/ '
+         bat 'tar -cvf file.tar C:\ProgramData\Jenkins\.jenkins\workspace\github_pipeline/ '
       }
       failure{
-         sh 'date'
+         bat 'date /T'
       }
       always{
-         sh 'ipconfig enp0s3'
+         bat 'ipconfig'
       }
    }
  }
