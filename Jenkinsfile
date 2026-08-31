@@ -17,6 +17,6 @@ steps{
       always{
          bat 'ipconfig'
       }
-   }
+   
  }
 }
