@@ -1,23 +1,33 @@
-pipeline
-{
-agent any;
-stages{
-stage('GIT '){
-steps{
-   git credentialsId: '50302996-1c79-4c45-ade0-1631673ed959', url: 'https://github.com/Deepakkumar02Github/My-project.git'
-   }
-  }
- }
-   post{
-      success{
-        bat 'echo sucess'
-      }
-      failure{
-         bat 'date /T'
-      }
-      always{
-         bat 'ipconfig'
-      }
-   
- }
+
+pipeline {
+    agent any
+
+    stages {
+
+        stage('GIT') {
+            steps {
+                git(
+                    credentialsId: '50302996-1c79-4c45-ade0-1631673ed959',
+                    url: 'https://github.com/Deepakkumar02Github/My-project.git'
+                )
+            }
+        }
+    }
+
+    post {
+
+        success {
+            bat 'echo SUCCESS'
+        }
+
+        failure {
+            bat 'date /T'
+        }
+
+        always {
+            bat 'ipconfig'
+        }
+    }
 }
+
+
