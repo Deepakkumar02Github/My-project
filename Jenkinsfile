@@ -10,7 +10,7 @@ steps{
  }
    post{
       success{
-        bat 'tar -cvf file.tar "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\github_pipeline"'
+        bat 'echo sucess'
       }
       failure{
          bat 'date /T'
